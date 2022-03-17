@@ -21,7 +21,7 @@
 </head> 
 
 <body>
-    <div class="wrapper mt-lg-5">
+    <div class="wrapper mt-lg-5" id="pdf-cv">
         <div class="sidebar-wrapper">
             <div class="profile-container">
                 <img class="profile" src="assets/images/profile.png" alt="" />
@@ -96,8 +96,10 @@
                         <p>Write application to solving many MMO problems such as: DropShipping, image processing, image recognize, video maker, storing data google sheet through api, HTTP server..</p>  
                         <div>
                             - What I learn:
-                            <li>Communicate, Estimate, Deploy, Debug</li>
-                            <li>Write documentation</li>
+                            <ul>
+                                <li>Communicate, Estimate, Deploy, Debug</li>
+                                <li>Write documentation</li>
+                            </ul>
                         </div>
                     </div><!--//details-->
                 </div><!--//item-->
@@ -114,9 +116,11 @@
                         <p>Crawling data for affiliate marketing, data processing, color recognize.</p>  
                         <div>
                             - What I learn:
-                            <li>Agile/SCRUM</li>
-                            <li>Atlassian Tool</li>
-                            <li>Gitlab</li>
+                            <ul>
+                                <li>Agile/SCRUM</li>
+                                <li>Atlassian Tool</li>
+                                <li>Gitlab</li>
+                            </ul>
                         </div>
                     
                     </div><!--//details-->
@@ -133,9 +137,11 @@
                     <div class="details">
                         <span class="project-title"><a href="https://aramtool.com/" target="_blank">Aramtool.com</a></span> - <span class="project-tagline">A websites that contain:</span>
                         <div>
-                            <li><a href="https://aramtool.com/shopping/" target="_blank">E-Commerce</a> with paypal payment</li>
-                            <li><a href="https://aramtool.com/model_ai/" target="_blank">Machine learning model</a> to predict</li>
-                            <li><a href="https://aramtool.com/convert" target="_blank">Image processing</a> with open cv</li>
+                            <ul>
+                                <li><a href="https://aramtool.com/shopping/" target="_blank">E-Commerce</a> with paypal payment</li>
+                                <li><a href="https://aramtool.com/model_ai/" target="_blank">Machine learning model</a> to predict</li>
+                                <li><a href="https://aramtool.com/convert" target="_blank">Image processing</a> with open cv</li>
+                            </ul>
                         </div>
                     
                     </div><!--//details-->
@@ -145,8 +151,10 @@
                     <div class="details">
                         <span class="project-title"><a href="https://gamejolt.com/games/fakesnake/619272/" target="_blank">FakeSnakeGame</a></span> - <span class="project-tagline">A game that</span>
                         <div>
-                            <li><a href="https://github.com/phudinhtruongk18/FakeSnakeGame/tree/main/FakeSnakeGame/CLIENT" target="_blank">Client</a>Client</a> graphic write with Pygame</li>
-                            <li><a href="https://github.com/phudinhtruongk18/FakeSnakeGame/tree/main/FakeSnakeGame/SERVER" target="_blank">Server</a> made with TCP protocol</li>
+                            <ul>
+                                <li><a href="https://github.com/phudinhtruongk18/FakeSnakeGame/tree/main/FakeSnakeGame/CLIENT" target="_blank">Client</a>Client</a> graphic write with Pygame</li>
+                                <li><a href="https://github.com/phudinhtruongk18/FakeSnakeGame/tree/main/FakeSnakeGame/SERVER" target="_blank">Server</a> made with TCP protocol</li>
+                            </ul>
                         </div>
                     
                     </div><!--//details-->
@@ -156,8 +164,10 @@
                     <div class="details">
                         <span class="project-title"><a href="https://github.com/phudinhtruongk18/FaceRecognition-GUI-APP" target="_blank">FaceRecognition-GUI-APP</a></span> - <span class="project-tagline">Simple face attendance recorder system</span>
                         <div>
-                            <li>Face Attendance</li>
-                            <li>Telegram bot for notification</li>
+                            <ul>
+                                <li>Face Attendance</li>
+                                <li>Telegram bot for notification</li>
+                            </ul>
                         </div>
                     </div><!--//details-->
                 </div><!--//item-->
@@ -166,9 +176,11 @@
                     <div class="details">
                         <span class="project-title"><a href="https://github.com/phudinhtruongk18/xpath_to_image_extension" target="_blank">HTML To Base64 Image</a></span> - <span class="project-tagline">Chrome extension that</span>
                         <div>
-                            <li>Convert selected xpath to Image (or base64)</li>
-                        </div>
-                    </div><!--//details-->
+                            <ul>
+                                <li>Convert selected xpath to Image (or base64)</li>
+                            </ul>
+                    </div>
+                </div><!--//details-->
                 </div><!--//item-->
 
 
@@ -225,14 +237,30 @@
             
         </div><!--//main-body-->
     </div>
- 
+    
+    
+
     <footer class="footer">
         <div class="text-center">
             <!--/* This template is free as long as you keep the footer attribution link. If you'd like to use the template without the attribution link, you can buy the commercial license via our website: themes.3rdwavemedia.com Thank you for your support. :) */-->
             <small class="copyright">Designed with <i class="fas fa-heart"></i> by <a href="http://themes.3rdwavemedia.com" target="_blank">Xiaoying Riley</a> for developers</small>
+
+            <!-- create btn to get cv pdf -->
+            <div class="text-center">
+                <button id="dl-pdf-btn">Download CV</button>
+            </div>
+
         </div><!--//container-->
     </footer><!--//footer-->
-        
+
+    
+
+    <!--========== HTML2PDF ==========-->
+    <script src="assets/js/html2pdf.bundle.min.js"></script>
+
+    <!--========== MAIN JS ==========-->
+    <script src="assets/js/main.js"></script>
+
 </body>
 </html> 
 
