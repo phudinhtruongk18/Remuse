@@ -13,7 +13,26 @@ let opt = {
 };
 
 function generateRemuse(){
-    html2pdf(cv_div)
+    var opt = {
+        margin: 0.3,
+        filename: 'download.pdf',
+        image: {type: 'jpeg', quality: 1},
+        html2canvas: {scale: 4, dpi: 72, letterRendering: true},
+        jsPDF: {unit: 'in', format: 'A2'},
+        html2canvas: {
+            onclone: (element) => {
+                const svgElements = Array.from(element.querySelectorAll('svg'));
+                svgElements.forEach(s => {
+                    const bBox = s.getBBox();
+                    s.setAttribute("x", bBox.x);
+                    s.setAttribute("y", bBox.y);
+                    s.setAttribute("width", bBox.width);
+                    s.setAttribute("height", bBox.height);
+                })
+            }
+        }
+    };
+    html2pdf().set(opt).from(cv_div).save();
 };
 
 btn_dl_pdf.addEventListener('click', event => {
