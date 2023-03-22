@@ -6,7 +6,6 @@ let cv_div = document.getElementById('pdf-cv');
 
 let opt = {
     margin:         0,
-    filename:       "dinhphuremuse.pdf",
     image:{type:    "jpeg",quality:1},
     html2canvas:    {scale:4 },
     jsPDF:          {format: 'a4', orientation: 'portrait'}
@@ -14,11 +13,11 @@ let opt = {
 
 function generateRemuse(){
     var opt = {
-        margin: 0.3,
-        filename: 'download.pdf',
+        margin: 0,
+        filename:       "dinhphuremuse.pdf",
         image: {type: 'jpeg', quality: 1},
-        html2canvas: {scale: 4, dpi: 72, letterRendering: true},
-        jsPDF: {unit: 'in', format: 'A2'},
+        html2canvas: {scale: 3, dpi: 72, letterRendering: true},
+        jsPDF: {unit: 'in', format: 'A3'},
         html2canvas: {
             onclone: (element) => {
                 const svgElements = Array.from(element.querySelectorAll('svg'));
