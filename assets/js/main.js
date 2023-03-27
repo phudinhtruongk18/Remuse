@@ -1,7 +1,4 @@
-// get btn_dl_pdf class = dl-pdf-btn
-let btn_dl_pdf = document.getElementById('dl-pdf-btn');
-
-// get cv-div id="pdf-cv"
+let btn_dl_pdf = document.getElementById('btn-download-pdf');
 let cv_div = document.getElementById('pdf-cv');
 
 function generateRemuse(){
@@ -31,3 +28,24 @@ btn_dl_pdf.addEventListener('click', event => {
     generateRemuse();
     //handle click
 });
+
+//<----------------- MODE BETWEEN SHORT AND DETAIL ----------------->
+const toggleModeInput = document.getElementById('cb3');
+var isDetailInfo = false;
+
+toggleModeInput.addEventListener("input", updateValue)
+
+function updateValue(event) {
+  console.log("isDetailMode", toggleModeInput.value)
+  isDetailInfo = !isDetailInfo;
+  if (isDetailInfo) {
+    console.log(" true");
+      document.getElementById("shortCv").classList.add("hidden");
+      document.getElementById("detailsCv").classList.remove("hidden");
+    } else {
+    console.log(" false");
+      document.getElementById("detailsCv").classList.add("hidden");
+      document.getElementById("shortCv").classList.remove("hidden");
+  }
+}
+//<//----------------- MODE BETWEEN SHORT AND DETAIL -----------------//>

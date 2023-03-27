@@ -17,9 +17,26 @@
     <link rel="stylesheet" href="assets/plugins/bootstrap/css/bootstrap.min.css">   
     <!-- Theme CSS -->  
     <link id="theme-style" rel="stylesheet" href="assets/css/orbit-5.css">
+    <link id="theme-style" rel="stylesheet" href="assets/css/btn.css">
 </head> 
 
 <body>
+    <div class="toggle-container">
+        <ul class="tg-list">
+            <div class="tg-list-item">
+                <h4>Detail</h4>
+                <input class="tgl tgl-skewed" id="cb3" type="checkbox"/>
+                <label class="tgl-btn" data-tg-off="OFF" data-tg-on="ON" for="cb3"></label>
+            </div>
+                <!-- create btn to get cv pdf -->
+            <div class="tg-list-item">
+                <button class="btn-download" id="btn-download-pdf">
+                    <div class="arrow"></div>
+                </button>
+            </div>
+        </ul>
+    </div><!--//toggle-container-->
+    
     <div class="wrapper mt-lg-5" id="pdf-cv">
         <div class="sidebar-wrapper">
             <div class="profile-container">
@@ -101,26 +118,30 @@
                         </div><!--//upper-row-->
                     <h3 class="job-title">Backend</h3>
                     </div><!--//meta-->
-                    <div class="details">
+
+                    <div class="details" id="shortCv">
+                        <!-- <p>Writing api and service.</p>   -->
+                        <div>
+                            - Outsource
+                            <ul>
+                                <li><b>Notification module</b> implemented notifications and <b>silent push</b></li>
+                                <li><b>Stripe payment integration</b> implement the ability for users to subscribe to monthly payment plans, make one-time charges to their orders, and provide tips to sellers, support QC with test clock.</li>
+                                <li><b>Chat and newsfeed modules</b> identify and fix any issues with the chat module, add new post types to the newsfeed, and ensure that the chat badge displayed correctly.</li>
+                                <li><b>Referral program</b> develop a referral program that would incentivize users to invite their friends to join the platform, as well as create targeted <b>email campaigns</b> to promote the program to existing users.</li>
+                                <li><b>Template app</b> upgrade the Firebase Cloud Messaging (FCM) to the latest version and integrate BrandIO links and data into the app.</li>
+                                <li><b>Docker compose </b>configured for development </li>
+                                <li>Completion of various other tasks as assigned</li>
+                            </ul>
+                        </div>
+                    
+                    </div><!--//details-->
+
+                    <!--  -->
+                    <div class="details" id="detailsCv">
                         <!-- <p>Writing api and service.</p>   -->
                         <div>
                             <!-- - Outsource -->
                             <ul>
-                                <li>
-                                    <div class="upper-row">
-                                        <b>Tip mobile app</b>
-                                        <div class="time">9/2022 - 3/2023</div>
-                                    </div><!--//upper-row-->
-
-                                    <p>A project source from clientwith a challenging codebase that is hard to read and maintain.</p>
-                                    <ul>
-                                        <li>Configured <b>Docker Compose</b> for easier control</li>
-                                        <li>Implemented <b>soft delete</b> user service</li>
-                                        <li>Provided <b>feedback</b> on user API bugs and implemented fixes in the next sprint (sprint 4)</li>
-                                        <li>Developed a <b>referral program</b> to incentivize users to invite their friends to join the platform and create targeted promotions</li>
-                                    </ul>
-                                </li>
-
                                 <li>
                                     <!-- <b>Template (4-2022 -> 6-2022)</b> -->
                                     <div class="upper-row">
@@ -130,7 +151,7 @@
                                     <ul>
                                         <li>Gained a thorough understanding of the <b>Service layer</b> concept</li>
                                         <li>Researched <b>Docker Compose</b> for managing multiple projects simultaneously</li>
-                                        <li>Learned how to implement <b>SDK</b> for mobile teams</li>                                    </ul>
+                                        <li>Researched implement <b>SDK</b> for mobile teams</li>                                    </ul>
                                 </li>
                                 
                                 <li>
@@ -142,7 +163,22 @@
                                     <ul>
                                         <li>Implemented a <b>referral system</b> using <b>deep link</b> data and Branch.io</li>
                                         <li>Created models and views based on the leader's schema</li>
-                                        <li>Researched <b>AWS S3</b> and fixed bugs related to Facebook sharing</li>                                    </ul>
+                                        <li>Researched <b>AWS S3</b> and resolved bugs related to Facebook sharing</li>                                    </ul>
+                                </li>
+
+                                <li>
+                                    <div class="upper-row">
+                                        <b>Tip mobile app</b>
+                                        <div class="time">9/2022 - 3/2023</div>
+                                    </div><!--//upper-row-->
+
+                                    <span>A project source from client with a challenging codebase that is hard to read and maintain.</span>
+                                    <ul>
+                                        <li>Configured <b>Docker Compose</b> for development</li>
+                                        <li>Implemented <b>soft delete</b> feature </li>
+                                        <li>Provided <b>feedback</b> on user API bugs and implemented fixes in the next sprint</li>
+                                        <li>Developed a <b>referral program</b> to incentivize users to invite their friends to join the platform and create targeted promotions</li>
+                                    </ul>
                                 </li>
 
                                 <li>
@@ -155,7 +191,7 @@
                                         <li>Researched <b>Stripe</b> (cards, subscriptions, test clock)</li>
                                         <li>Implemented registration, modification, and cancellation of subscription payments</li>
                                         <li>Handled <b>Stripe webhook</b> for subscription renewals</li>
-                                        <li>Supported Quality Control with <b>Stripe's test clock</b></li>
+                                        <li>Assisted QC by using <b>Stripe's test clock</b> to simulate various testing scenarios. </li>
                                     </ul>
                                 </li>
 
@@ -165,7 +201,7 @@
                                         <div class="time">9/2022 - 10/2022</div>
                                     </div><!--//upper-row-->
                                     <ul>
-                                        <li>Implemented notifications for invite actions</li>
+                                        <li>Implemented notifications for invite campaign actions</li>
                                     </ul>
                                 </li>
                                 
@@ -176,23 +212,23 @@
                                     </div><!--//upper-row-->
                                     <ul>
                                         <li>Payment module: Implemented Stripe for processing payments</li>
-                                        <li>Notification module: Implemented notifications and silent push</li>
-                                        <li>Chat module: Implemented one-on-one chat using PostgreSQL materialized views</li>
-                                        <li>Fixed order's timezone bug</li>
+                                        <li>Notification module: Implemented notifications and <b>silent push</b></li>
+                                        <li>Chat module: Implemented one-on-one chat</li>
+                                        <!--  using PostgreSQL materialized views -->
+                                        <li>Fixed a timezone bug</li>
                                         <li>Rating module: Implemented a rating system for orders and deliverers</li>
                                     </ul>
                                 </li>
                                 
                                 <li>
                                     <div class="upper-row">
-                                        <b>A social app for Hollywood network</b>
+                                        <b>Social Media app for networking </b>
                                         <div class="time">1/2023 - 3/2023</div>
                                     </div><!--//upper-row-->
                                     <ul>
                                         <li>Researched <b>Wowza</b> livestream API</li>
-                                        <li>Fixed newsfeed type</li>
                                         <li>Implemented a current viewer count for livestreams</li>
-                                        <li>Developed a notification module</li>
+                                        <li>Notification module</li>
                                         <li>Researched <b>In-App Purchases</b> and fixed related bugs</li>
                                     </ul>
                                 </li>
@@ -320,10 +356,6 @@
             <!--/* This template is free as long as you keep the footer attribution link. If you'd like to use the template without the attribution link, you can buy the commercial license via our website: themes.3rdwavemedia.com Thank you for your support. :) */-->
             <small class="copyright">Designed with <i class="fas fa-heart"></i> by <a href="http://themes.3rdwavemedia.com" target="_blank">Xiaoying Riley</a> for developers</small>
 
-            <!-- create btn to get cv pdf -->
-            <div class="text-center">
-                <button id="dl-pdf-btn">Download CV</button>
-            </div>
 
         </div><!--//container-->
     </footer><!--//footer-->

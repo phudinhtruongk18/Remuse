@@ -1,0 +1,384 @@
+.hidden {
+  display: none;
+}
+
+/* Center the toggle button container */
+.toggle-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 20px;
+}
+
+/* Style the toggle button */
+.toggle-btn {
+  width: 100px;
+  height: 40px;
+  border: none;
+  border-radius: 20px;
+  background-color: #cccccc;
+  color: #ffffff;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+/* Style the toggle button in 'detail' mode */
+.toggle-btn.detail {
+  background-color: #ff9900;
+}
+
+/* Style the toggle button in 'short' mode */
+.toggle-btn.short {
+  background-color: #cccccc;
+}
+
+/* Style the toggle button when it is clicked */
+.toggle-btn:focus {
+  outline: none;
+}
+
+/* Style the toggle switch label */
+.switch-label {
+  display: inline-block;
+  margin-right: 10px;
+  font-size: 16px;
+}
+
+/* Hide the toggle switch checkbox */
+.switch-checkbox {
+  display: none;
+}
+
+/* Style the toggle switch track */
+.switch-track {
+  width: 60px;
+  height: 30px;
+  border-radius: 30px;
+  background-color: #cccccc;
+  position: relative;
+  transition: background-color 0.2s ease-in-out;
+}
+
+/* Style the toggle switch thumb */
+.switch-thumb {
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  background-color: #ffffff;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.2);
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  transition: left 0.2s ease-in-out;
+}
+
+/* Style the toggle switch thumb in 'detail' mode */
+.switch-checkbox:checked + .switch-track .switch-thumb {
+  left: 32px;
+}
+
+/* Style the toggle switch track in 'detail' mode */
+.switch-checkbox:checked + .switch-track {
+  background-color: #ff9900;
+}
+
+/* The switch - the box around the slider */
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+}
+
+/* Hide default HTML checkbox */
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/* The slider */
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+input:checked + .slider {
+  background-color: #2196F3;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #2196F3;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+
+.tg-list {
+  text-align: center;
+  display: flex;
+  align-items: center;
+}
+
+.tg-list-item {
+  margin: 0 2em;
+}
+
+.tgl {
+  display: none;
+}
+
+.tgl, .tgl:after, .tgl:before, .tgl *, .tgl *:after, .tgl *:before, .tgl + .tgl-btn {
+  box-sizing: border-box;
+}
+.tgl::-moz-selection, .tgl:after::-moz-selection, .tgl:before::-moz-selection, .tgl *::-moz-selection, .tgl *:after::-moz-selection, .tgl *:before::-moz-selection, .tgl + .tgl-btn::-moz-selection {
+  background: none;
+}
+.tgl::selection, .tgl:after::selection, .tgl:before::selection, .tgl *::selection, .tgl *:after::selection, .tgl *:before::selection, .tgl + .tgl-btn::selection {
+  background: none;
+}
+.tgl + .tgl-btn {
+  outline: 0;
+  display: block;
+  width: 4em;
+  height: 2em;
+  position: relative;
+  cursor: pointer;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+.tgl + .tgl-btn:after, .tgl + .tgl-btn:before {
+  position: relative;
+  display: block;
+  content: "";
+  width: 50%;
+  height: 100%;
+}
+.tgl + .tgl-btn:after {
+  left: 0;
+}
+.tgl + .tgl-btn:before {
+  display: none;
+}
+.tgl:checked + .tgl-btn:after {
+  left: 50%;
+}
+
+.tgl-skewed + .tgl-btn {
+  overflow: hidden;
+  transform: skew(-10deg);
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+  transition: all 0.2s ease;
+  font-family: sans-serif;
+  background: #888;
+}
+.tgl-skewed + .tgl-btn:after, .tgl-skewed + .tgl-btn:before {
+  transform: skew(10deg);
+  display: inline-block;
+  transition: all 0.2s ease;
+  width: 100%;
+  text-align: center;
+  position: absolute;
+  line-height: 2em;
+  font-weight: bold;
+  color: #fff;
+  text-shadow: 0 1px 0 rgba(0, 0, 0, 0.4);
+}
+.tgl-skewed + .tgl-btn:after {
+  left: 100%;
+  content: attr(data-tg-on);
+}
+.tgl-skewed + .tgl-btn:before {
+  left: 0;
+  content: attr(data-tg-off);
+}
+.tgl-skewed + .tgl-btn:active {
+  background: #888;
+}
+.tgl-skewed + .tgl-btn:active:before {
+  left: -10%;
+}
+.tgl-skewed:checked + .tgl-btn {
+  background: #86d993;
+}
+.tgl-skewed:checked + .tgl-btn:before {
+  left: -100%;
+}
+.tgl-skewed:checked + .tgl-btn:after {
+  left: 0;
+}
+.tgl-skewed:checked + .tgl-btn:active:after {
+  left: 10%;
+}
+
+@keyframes button-shadow {
+  from {
+    transform: rotate(0);
+    bottom: -5px;
+    right: -5px;
+    opacity: 1;
+  }
+  to {
+    transform: rotate(40deg);
+    bottom: 50px;
+    right: -60px;
+    opacity: 0;
+  }
+}
+@keyframes button-arrow-rotate {
+  0% {
+    width: 15px;
+    margin: -25px auto 0;
+  }
+  1% {
+    width: 10px;
+    height: 0px;
+    margin-top: 15px;
+    transform: rotate(45deg);
+  }
+  100% {
+    width: 10px;
+    margin-top: 15px;
+    transform: rotate(45deg);
+    height: 35px;
+  }
+}
+@keyframes button-arrow-down {
+  from {
+    bottom: -25px;
+    opacity: 1;
+  }
+  to {
+    bottom: -40px;
+    opacity: 0;
+  }
+}
+@keyframes button-arrow-up {
+  0% {
+    height: 20px;
+    transform: rotateZ(45deg);
+    right: -7px;
+  }
+  1% {
+    right: 0px;
+    height: 10px;
+    width: 0;
+    transform: rotateZ(0);
+  }
+  100% {
+    right: 0px;
+    height: 10px;
+    width: 20px;
+    transform: rotateZ(0);
+  }
+}
+
+button {
+  background-color: #fff;
+  width: 70px;
+  height: 70px;
+  border: none;
+  outline: none;
+  position: relative;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.5s;
+}
+button .arrow {
+  height: 25px;
+  width: 15px;
+  background-color: #99f3bd;
+  border-radius: 2px;
+  margin: -25px auto 0;
+  position: relative;
+}
+button .arrow:after {
+  content: "";
+  height: 20px;
+  width: 20px;
+  position: absolute;
+  background-color: #99f3bd;
+  border-radius: 2px;
+  transform: rotateZ(45deg) translate(1px, 7px);
+  bottom: 0;
+  right: -7px;
+  transition: all 0.5s;
+  transition-delay: 0.5s;
+}
+button .arrow:before {
+  content: "";
+  background-color: #99f3bd;
+  width: 25px;
+  height: 10px;
+  position: absolute;
+  left: -5px;
+  bottom: -25px;
+  border-radius: 2px;
+  transition: all 0.5s;
+}
+button:after, button:before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  background-color: #99f3bd;
+  height: 100%;
+  width: 100%;
+  bottom: -5px;
+  right: -5px;
+  border-radius: 5px;
+}
+button:after {
+  animation-play-state: pause;
+}
+button:active {
+  width: 180px;
+  height: 90px;
+}
+button:focus:after {
+  animation: button-shadow 1s;
+}
+button:focus .arrow {
+  animation: button-arrow-rotate 0.5s forwards;
+  animation-delay: 0.5s;
+}
+button:focus .arrow:after {
+  animation: button-arrow-up 0.5s forwards;
+  animation-delay: 0.5s;
+}
+button:focus .arrow:before {
+  animation: button-arrow-down 0.5s forwards;
+}
