@@ -44,9 +44,14 @@ def findSubarraySum(arr, n, Sum):
 
 def find_subarrays_with_sum_k(arr, k):
     subarrays = []
-    sum_map = {0: [-1]}
+    sum_map = {}
     curr_sum = 0
     for i, num in enumerate(arr):
+        print("---------------------")
+        print("idx", i)
+        print("summap", sum_map)
+        print("cur", curr_sum)
+        print("subarrays", subarrays)
         curr_sum += num
         diff = curr_sum - k
         if diff in sum_map:
@@ -60,7 +65,7 @@ def find_subarrays_with_sum_k(arr, k):
 if __name__ == "__main__":
  
     arr =  [10, 2, -2, -20, 10] 
-    Sum = -12
+    Sum = -10
     n = len(arr)
     print(findSubarraySum(arr, n, Sum))
     print(find_subarrays_with_sum_k(arr, Sum))
