@@ -63,6 +63,19 @@ def find_subarrays_with_sum_k(arr, k):
         sum_map[curr_sum].append(i)
     return subarrays
 
+def subarrays_with_sum(arr, k):
+    sum_map = {0: [-1]}  # stores running sum and index where it occurred
+    curr_sum = 0
+    result = []
+    for i, num in enumerate(arr):
+        curr_sum += num
+        if curr_sum - k in sum_map:
+            result.extend([arr[j+1:i+1] for j in sum_map[curr_sum-k]])
+        if curr_sum not in sum_map:
+            sum_map[curr_sum] = []
+        sum_map[curr_sum].append(i)
+    return result
+
 if __name__ == "__main__":
  
     arr =  [10, 2, -2, -20, 10] 
@@ -71,6 +84,8 @@ if __name__ == "__main__":
     Sum = -10
     n = len(arr)
     print(findSubarraySum(arr, n, Sum))
-    print(find_subarrays_with_sum_k(arr, Sum))
+    # print(find_subarrays_with_sum_k(arr, Sum))
+    # print(subarrays_with_sum(arr, Sum))
+    # print(subarrays_with_sum([5, 1, 2, 7, 3, 4], 8))
      
 # This code is contributed by Rituraj Jain
