@@ -3,11 +3,11 @@ let cv_div = document.getElementById('pdf-cv');
 
 function generateRemuse(){
     var opt = {
-        margin: 0,
+        margin: 0.1,
         filename:       "TruongDinhPhu_Python_0948224950.pdf",
         image: {type: 'jpeg', quality: 1},
         html2canvas: {scale: 4, dpi: 72},
-        jsPDF: {unit: 'in', format: 'A2'},
+        jsPDF: {unit: 'in', format: 'A4'},
         html2canvas: {
             onclone: (element) => {
                 const svgElements = Array.from(element.querySelectorAll('svg'));
