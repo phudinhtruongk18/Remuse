@@ -1,5 +1,5 @@
 # Python3 program to find the number of
-# subarrays with sum exactly equal to k.
+# Ãaaaaubarrays with sum exactly equal to k.
 from collections import defaultdict
  
 # Function to find number of subarrays 

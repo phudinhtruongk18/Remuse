@@ -1,6 +1,6 @@
 from typing import List
 import collections
-
+# a a
 class Solution:
 	def subarraySum(self, nums: List[int], k: int) -> int:
 
@@ -14,7 +14,7 @@ class Solution:
 
 			if prefsum-k in prefix_sums:
 				ans = ans + prefix_sums[prefsum-k]
-
+ 
 			if prefsum not in prefix_sums:
 				prefix_sums[prefsum] = 1
 			else:
