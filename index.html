@@ -1,9 +1,710 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
-    <title>Title of the document</title>
+    <title>Phu Dinh Truong</title>
+    <!-- Meta -->
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Responsive HTML5 Resume/CV Template for Developers"
+    />
+    <meta name="author" content="Xiaoying Riley at 3rd Wave Media" />
+    <link rel="shortcut icon" href="favicon.ico" />
+    <!-- Google Font -->
+    <link
+      href="https://fonts.googleapis.com/css?family=Roboto:400,500,400italic,300italic,300,500italic,700,700italic,900,900italic"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <!-- FontAwesome JS-->
+    <script defer src="assets/fontawesome/js/all.min.js"></script>
+    <!-- Global CSS -->
+    <link
+      rel="stylesheet"
+      href="assets/plugins/bootstrap/css/bootstrap.min.css"
+    />
+    <!-- Theme CSS -->
+    <link id="theme-style" rel="stylesheet" href="assets/css/orbit-5.css" />
+    <link id="theme-style" rel="stylesheet" href="assets/css/btn.css" />
   </head>
+
   <body>
-      <iframe src="https://docs.google.com/gview?url=https://phudinhtruongk18.github.io/Remuse/TruongDinhPhu.pdf&embedded=true" style="width:600px; height:500px;" frameborder="0"></iframe>
-    </body>
+    <div class="toggle-container">
+      <ul class="tg-list">
+        <div class="tg-list-item">
+          <h4>Detail</h4>
+          <input class="tgl tgl-skewed" id="cb3" type="checkbox" />
+          <label
+            class="tgl-btn"
+            data-tg-off="OFF"
+            data-tg-on="ON"
+            for="cb3"
+          ></label>
+        </div>
+        <!-- create btn to get cv pdf -->
+        <div class="tg-list-item">
+          <button class="btn-download" id="btn-download-pdf">
+            <div class="arrow"></div>
+          </button>
+        </div>
+      </ul>
+    </div>
+    <!--//toggle-container-->
+
+    <div class="wrapper mt-lg-5" id="pdf-cv">
+      <div class="sidebar-wrapper">
+        <div class="profile-container">
+          <img class="profile" src="assets/images/profile.png" alt="" />
+          <h1 class="name">Trương Đình Phú</h1>
+          <h3 class="tagline">Python</h3>
+        </div>
+        <!--//profile-container-->
+
+        <div class="contact-container container-block">
+          <ul class="list-unstyled contact-list">
+            <!-- 15/11/2000 -->
+            <li class="email">
+              <i style="color: white" class="long_eva fas fa-birthday-cake"></i
+              >15/11/2000
+            </li>
+            <li class="email">
+              <i style="color: white" class="long_eva fas fa-envelope"></i
+              ><a href="mailto: phudinhtruongk18@gmail.com"
+                >phudinhtruongk18@gmail.com</a
+              >
+            </li>
+            <li class="phone">
+              <i style="color: white" class="long_eva fas fa-phone"></i
+              ><a href="tel:+84948224950">+84948224950</a>
+            </li>
+            <!-- <li class="website"><i class="fas fa-globe"></i><a href="https://aramtool.com" target="_blank">Aramtool.com</a></li> -->
+            <li class="youtube">
+              <i style="color: white" class="long_eva fab fa-youtube"></i
+              ><a
+                href="https://www.youtube.com/channel/UCQk8g7zZFsA4sNzcViS0rtg/featured"
+                target="_blank"
+                >Phú Đình Trương</a
+              >
+            </li>
+            <li class="linkedin">
+              <i style="color: white" class="long_eva fab fa-linkedin-in"></i
+              ><a
+                href="https://www.linkedin.com/in/phu-dinh-7425191ab/"
+                target="_blank"
+                >Phu Dinh</a
+              >
+            </li>
+            <li class="github">
+              <i style="color: white" class="long_eva fab fa-github"></i
+              ><a href="https://github.com/phudinhtruongk18" target="_blank"
+                >phudinhtruongk18</a
+              >
+            </li>
+            <!-- <li class="twitter"><i class="fab fa-twitter"></i><a href="https://twitter.com/PhuDinh76880717" target="_blank">@PhuDinh76880717</a></li> -->
+          </ul>
+        </div>
+        <!--//contact-container-->
+        <div class="education-container container-block">
+          <h2 class="container-block-title">Education</h2>
+          <div class="item">
+            <a href="https://www.harvard.edu/" target="_blank">
+              <h4 class="degree">Information technology</h4>
+            </a>
+            <h5 class="meta">Ho Chi Minh City University of Transport</h5>
+            <div class="time">2018-2022</div>
+          </div>
+          <!--//item-->
+        </div>
+        <!--//education-container-->
+
+        <div class="languages-container container-block">
+          <h2 class="container-block-title">Languages</h2>
+          <ul class="list-unstyled interests-list">
+            <li>Vietnamese <span class="lang-desc">(Native)</span></li>
+            <li>English</li>
+          </ul>
+        </div>
+        <!--//interests-->
+
+        <div class="interests-container container-block">
+          <h2 class="container-block-title">Interests</h2>
+          <ul class="list-unstyled interests-list">
+            <li>Reading</li>
+            <li>Beach</li>
+            <li>Beach Read</li>
+          </ul>
+        </div>
+        <!--//interests-->
+      </div>
+      <!--//sidebar-wrapper-->
+
+      <div class="main-wrapper">
+        <a href="https://phudinhtruongk18.github.io/Remuse/">
+          <h4 class="section-title">
+            <span class="icon-holder">
+              <i style="color: white" class="long_eva fas fa-file-alt">
+              </i> </span
+            >Latest CV version here
+          </h4>
+        </a>
+
+        <section class="section summary-section">
+          <h2 class="section-title">
+            <span class="icon-holder"
+              ><i style="color: white" class="long_eva fas fa-user"></i></span
+            >Summary
+          </h2>
+          <div class="summary">
+            <!-- generata some ul-->
+            <ul class="list-unstyled">
+              <li>- Self-learning, research</li>
+              <li>- Patient, active listening</li>
+            </ul>
+          </div>
+          I am skilled in building applications using
+          <b>Django</b>, <b>PostgreSQL</b>, <b>Redis</b>, <b>Celery</b>,
+          <b>Nginx</b> and <b>Docker Compose</b>. <br />
+          In the future, I plan to expand my skills by learning
+          <b>Elasticsearch</b>, <b>RabbitMQ</b>, and <b>React</b>.
+          Additionally, I am interested in learning <b>Go</b> and
+          <b>AWS</b> within the next three years. <br />
+          I'm always open to learning new things, so please don't hesitate to reach out to me
+          <!--//summary-->
+        </section>
+        <!--//section-->
+
+        <section class="section experiences-section">
+          <h2 class="section-title">
+            <span class="icon-holder"
+              ><i
+                style="color: white"
+                class="long_eva fas fa-briefcase"
+              ></i></span
+            >Experiences
+          </h2>
+
+          <div class="item">
+            <div class="meta">
+                <div class="upper-row">
+                    <h3 class="job-title">Freelancer</h3>
+                    <div class="time">2020 - 2022</div>
+                </div><!--//upper-row-->
+                <div class="company">Coder</div>
+            </div><!--//meta-->
+            <div class="details">	
+                <p>I solved various problems in the MMO development field, including dropshipping, image processing, image recognition, tiktok video creation, and HTTP server setup...</p>  
+                <div>
+                    <ul>
+                        <li>Communicate, estimate, deploy, debug</li>
+                        <li>Write documentation</li>
+                        <li>Agile/SCRUM, Atlassian, Gitlab</li>
+                    </ul>
+                </div>
+            </div><!--//details-->
+        </div><!--//item-->
+
+
+          <div class="item">
+            <div class="meta">
+              <div class="upper-row">
+                <div class="company">HDWEBSOFT</div>
+                <div class="time">04/2022 - 03/2023</div>
+              </div>
+              <!--//upper-row-->
+              <h3 class="job-title">Backend</h3>
+            </div>
+            <!--//meta-->
+
+            <div class="details" id="shortCv">
+              <!-- <p>Writing api and service.</p>   -->
+              <div>
+                - Outsourcing
+                <ul>
+                  <li>
+                    <b>Notification module</b> implemented notifications and
+                    <b>silent push</b>
+                  </li>
+                  <li>
+                    <b>Stripe payment integration</b> allows users to subscribe
+                    to monthly payment plans, make one-time charges to their
+                    orders, and provide tips to sellers Assisted QC by using
+                    Stripe's test clock to simulate various testing scenarios.
+                  </li>
+                  <li>
+                    <b>Chat and newsfeed modules</b> identified and fixed any
+                    issues with the chat module, add new post types to the
+                    newsfeed, and ensure that the chat badge is displayed
+                    correctly.
+                  </li>
+                  <li>
+                    <b>Referral program</b> develop a referral program that
+                    incentivize users to invite their friends to join the
+                    platform and create targeted <b>email campaigns</b> to
+                    promote the program to existing users.
+                  </li>
+                  <li>
+                    <b>Template app</b> upgrades the Firebase Cloud Messaging
+                    (FCM) to the latest version and integrates BrandIO links and
+                    data into the app.
+                  </li>
+                  <li><b>Docker compose </b>configured for development</li>
+                  <li>Completion of various other tasks as assigned</li>
+                </ul>
+              </div>
+            </div>
+            <!--//details-->
+
+            <!--  -->
+            <div class="details hidden" id="detailsCv">
+              <!-- <p>Writing api and service.</p>   -->
+              <div>
+                <!-- - Outsource -->
+                Due to company policy regarding confidentiality, I can't reveal
+                project's name.
+                <ul>
+                  <li>
+                    <!-- <b>Template (4-2022 -> 6-2022)</b> -->
+                    <div class="upper-row">
+                      <b>Template</b>
+                      <div class="time">4/2022 - 6/2022</div>
+                    </div>
+                    <!--//upper-row-->
+                    As a new team member , my main tasks are to read and
+                    research the project, the technology the team is using, and
+                    the project's architecture. Additionally, I need to learn
+                    how to use the team's tools.
+                    <ul>
+                      <li>
+                        Gained a thorough understanding of the
+                        <b>service layer</b> concept
+                      </li>
+                      <li>
+                        Researched <b>Docker Compose</b> for managing multiple
+                        projects simultaneously
+                      </li>
+                      <li>
+                        Learn typescript to implement <b>SDK</b> for mobile
+                        teams
+                      </li>
+                    </ul>
+                  </li>
+
+                  <li>
+                    <!-- <b>Podcast mobile app (6-2022 -> 8-2022)</b> -->
+                    <div class="upper-row">
+                      <b>Podcast mobile app</b>
+                      <div class="time">6/2022 - 8/2022</div>
+                    </div>
+                    <!--//upper-row-->
+                    <ul>
+                      <li>
+                        Created models and views based on the mentor's schema
+                      </li>
+                      <li>
+                        Implemented a <b>referral system</b> using
+                        <b>deep link</b> data and Branch.io
+                      </li>
+                      <li>
+                        Researched <b>AWS S3</b> and resolved bugs related to
+                        Facebook sharing
+                      </li>
+                    </ul>
+                  </li>
+
+                  <li>
+                    <div class="upper-row">
+                      <b>Tip mobile app</b>
+                      <div class="time">9/2022 - 3/2023</div>
+                    </div>
+                    <!--//upper-row-->
+
+                    <span>
+                      The project originates from the client and has a
+                      challenging codebase that is hard to read and maintain.
+                      <br />In addition, the project has a lot of bugs. I have
+                      to fix bugs, estimate time and implement new features in
+                      the next 3 sprints. And make sure it does not affect
+                      current features.
+                    </span>
+                    <ul>
+                      <li>Configured <b>Docker Compose</b> for development</li>
+                      <li>Implemented <b>soft delete</b> feature</li>
+                      <li>
+                        Developed a <b>referral program</b> to incentivize users
+                        to invite their friends to join the platform and create
+                        targeted promotions
+                      </li>
+                    </ul>
+                  </li>
+
+                  <li>
+                    <!-- <b>Quiz mobile app (9-2022 -> 10-2022)</b> -->
+                    <div class="upper-row">
+                      <b>Quiz mobile app</b>
+                      <div class="time">9/2022 - 10/2022</div>
+                    </div>
+                    <!--//upper-row-->
+                    Quiz app that offers cash awards to users for winning. My
+                    task is to implement a subscription package that
+                    automatically renews every month. Each subscription package
+                    will provide access to specific quizzes that users can play.
+                    <ul>
+                      <li>
+                        Researched <b>Stripe</b>
+                        and implemented registration, modification, and
+                        cancellation of subscription payments
+                      </li>
+                      <li>
+                        Assisted QC by using <b>Stripe's test clock</b> to
+                        simulate various testing scenarios.
+                      </li>
+                    </ul>
+                  </li>
+
+                  <li>
+                    <div class="upper-row">
+                      <b>App campaign voter for mobile and desktop</b>
+                      <div class="time">9/2022 - 10/2022</div>
+                    </div>
+                    <!--//upper-row-->
+                    <ul>
+                      <li>
+                        Implemented notifications for invite campaign actions
+                      </li>
+                    </ul>
+                  </li>
+
+                  <li>
+                    <div class="upper-row">
+                      <b>Medicine Delivery app</b>
+                      <div class="time">11/2022 - 2/2023</div>
+                    </div>
+                    <!--//upper-row-->
+                    <ul>
+                      <li>
+                        Payment module: Implemented Stripe for payments
+                        processing
+                      </li>
+                      <li>
+                        Notification module: Implemented notifications and
+                        <b>silent push</b>
+                      </li>
+                      <li>Chat module: Implemented one-on-one chat</li>
+                      <!--  using PostgreSQL materialized views -->
+                      <li>Fixed a timezone bug</li>
+                      <li>
+                        Rating module: Implemented a rating system for orders
+                        and deliverers
+                      </li>
+                    </ul>
+                  </li>
+
+                  <li>
+                    <div class="upper-row">
+                      <b>Social Media app for networking </b>
+                      <div class="time">1/2023 - 3/2023</div>
+                    </div>
+                    <!--//upper-row-->
+                    <ul>
+                      <!-- <li>
+                        Implemented a current viewer count for livestreams
+                      </li> -->
+                      <li>Notification module</li>
+                      <li>
+                        Researched <b>In-App Purchases</b> and fixed related
+                        bugs
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <!--//details-->
+          </div>
+          <!--//item-->
+        </section>
+        <!--//section-->
+
+        <section class="section projects-section">
+          <h2 class="section-title">
+            <span class="icon-holder"
+              ><i
+                style="color: white"
+                class="long_eva fas fa-archive"
+              ></i></span
+            >Projects
+          </h2>
+          <!-- <div class="intro">
+                    <p>Some of my favorites</p>
+                </div>//intro -->
+          <div class="item">
+            <div class="details">
+              <span class="project-title"
+                ><a href="https://thich2hand.com/" target="_blank"
+                  >Thich2Hand.com</a
+                ></span
+              >
+              - <span class="project-tagline">A website that contains</span>
+              <div>
+                <ul>
+                  <li>
+                    <a href="https://thich2hand.com/shopping/" target="_blank"
+                      >E-Commerce</a
+                    >
+                    with PayPal payment
+                  </li>
+                  <li>
+                    <a
+                      href="https://thich2hand.com/shopping/model_ai/"
+                      target="_blank"
+                      >Machine learning model</a
+                    >
+                    to predict
+                  </li>
+                  <li>
+                    <a href="https://thich2hand.com/convert" target="_blank"
+                      >Image processing</a
+                    >
+                    with open cv
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <!--//details-->
+          </div>
+          <!--//item-->
+
+          <div class="item">
+            <div class="details">
+              <span class="project-title"
+                ><a
+                  href="https://gamejolt.com/games/fakesnake/619272/"
+                  target="_blank"
+                  >FakeSnakeGame</a
+                ></span
+              >
+              - <span class="project-tagline">A game that</span>
+              <div>
+                <ul>
+                  <li>
+                    <a
+                      href="https://github.com/phudinhtruongk18/FakeSnakeGame/tree/main/FakeSnakeGame/CLIENT"
+                      target="_blank"
+                      >Client</a
+                    >
+                    graphic created with Pygame
+                  </li>
+                  <li>
+                    <a
+                      href="https://github.com/phudinhtruongk18/FakeSnakeGame/tree/main/FakeSnakeGame/SERVER"
+                      target="_blank"
+                      >Server</a
+                    >
+                    made with Socket
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <!--//details-->
+          </div>
+          <!--//item-->
+
+          <div class="item">
+            <div class="details">
+              <span class="project-title"
+                ><a
+                  href="https://github.com/phudinhtruongk18/FaceRecognition-GUI-APP"
+                  target="_blank"
+                  >FaceRecognition-GUI-APP</a
+                ></span
+              >
+              -
+              <span class="project-tagline"
+                >Simple face attendance recorder system</span
+              >
+              <div>
+                <ul>
+                  <li>Face Attendance</li>
+                  <li>Telegram bot for notification</li>
+                </ul>
+              </div>
+            </div>
+            <!--//details-->
+          </div>
+          <!--//item-->
+        </section>
+        <!--//section-->
+
+        <section class="skills-section section">
+          <h2 class="section-title">
+            <span class="icon-holder"
+              ><i style="color: white" class="long_eva fas fa-rocket"></i></span
+            >Skills
+          </h2>
+          <div class="skillset">
+            <div class="item">
+              <h3 class="level-title">Python &amp; Django</h3>
+              <span>Intermediate</span>
+              <!-- <div class="progress level-bar">
+						    <div class="progress-bar theme-progress-bar" role="progressbar" style="width: 99%" aria-valuenow="99" aria-valuemin="0" aria-valuemax="100"></div>
+						</div>                                -->
+            </div>
+            <!--//item-->
+
+            <div class="item">
+              <h3 class="level-title">Javascript</h3>
+              <span>Beginer</span>
+              <!-- <div class="progress level-bar">
+						    <div class="progress-bar theme-progress-bar" role="progressbar" style="width: 98%" aria-valuenow="98" aria-valuemin="0" aria-valuemax="100"></div>
+						</div>                               -->
+            </div>
+            <!--//item-->
+
+            <div class="item">
+              <h3 class="level-title">SQL</h3>
+              <span>Postgres</span>
+            </div>
+            <!--//item-->
+
+            <div class="item">
+              <h3 class="level-title">NoSQL</h3>
+              <span>MongoDb</span>
+            </div>
+            <!--//item-->
+
+            <div class="item">
+              <h3 class="level-title">Deployment</h3>
+              <span>IIS, Docker, Nginx, ngrok</span>
+            </div>
+            <!--//item-->
+
+            <div class="item">
+              <h3 class="level-title">Test</h3>
+              <span>UnitTest, Postman, Selenium</span>
+            </div>
+            <!--//item-->
+
+            <div class="item">
+              <h3 class="level-title">AI for productivity</h3>
+              <div class="item">
+                <li>Copilot</li>
+                <li>Chat GPT</li>
+              </div>
+              <!--//item-->
+            </div>
+
+            <div class="item">
+              <h3 class="level-title">Media</h3>
+              <div class="item">
+                <!-- <li>Photoshop(CS6, 2021)</li> -->
+                FFmpeg
+                <!-- , Camtasia, Premiere)</li> -->
+              </div>
+              <!--//item-->
+            </div>
+          </div>
+          <div>
+            <!-- I am currently skilled in building full-stack web applications using Django, PostgreSQL, Redis, Celery, Nginx, and Docker Compose. In the future, I plan to expand my skills by learning how to use Elasticsearch, RabbitMQ, and React. Additionally, I am interested in learning Go and AWS within the next three years. -->
+            <!-- My current stack is <b>Django</b>, <b>PostgreSQL</b>, <b>Redis</b>, <b>Celery</b>, <b>Nginx</b>, <b>Docker Compose</b>
+          <br>
+          In the future <b>Elasticsearch</b>, <b> RabbitMQ</b>, <b>React</b> will be in the list
+          <br>
+          I also want to try <b>Go</b> and more about<b> AWS</b> with in next 3 years -->
+          </div>
+        </section>
+        <!--//skills-section-->
+
+        <!-- certificate -->
+        <section class="skills-section section">
+          <h2 class="section-title">
+            <span class="icon-holder"
+              ><i
+                style="color: white"
+                class="long_eva fas fa-certificate"
+              ></i></span
+            >Certificates
+          </h2>
+          <div class="skillset">
+            <!-- some thing  -->
+
+            <div class="item">
+              <div class="details">
+                <div class="upper-row">
+                  <span class="project-title"
+                    ><a
+                      href="https://www.datacamp.com/statement-of-accomplishment/course/c3ed7d34101ce277d644cd6d48f8d8e55728edb5"
+                      target="_blank"
+                      >Introduction to Python by DataCamp</a
+                    ></span
+                  >
+                  <div class="time">9/2019</div>
+                </div>
+              </div>
+              <!--//details-->
+            </div>
+            <!--//item-->
+
+            <div class="item">
+              <div class="details">
+                <div class="upper-row">
+                  <span class="project-title"
+                    ><a
+                      href="https://www.datacamp.com/statement-of-accomplishment/course/e23603188f0ca162d5505dec0c8ffeec20244b46"
+                      target="_blank"
+                      >Intermediate Python by DataCamp</a
+                    ></span
+                  >
+                  <div class="time">9/2019</div>
+                </div>
+              </div>
+              <!--//details-->
+            </div>
+            <!--//item-->
+
+            <div class="item">
+              <div class="details">
+                <div class="upper-row">
+                  <span class="project-title"
+                    ><a
+                      href="https://www.datacamp.com/statement-of-accomplishment/course/839e406fa4ff753fa74f9ac1d9588bd382147767"
+                      target="_blank"
+                      >Intermediate SQL Queries by DataCamp</a
+                    ></span
+                  >
+                  <div class="time">9/2020</div>
+                </div>
+              </div>
+              <!--//details-->
+            </div>
+            <!--//item-->
+          </div>
+        </section>
+        <!--//skills-section-->
+      </div>
+      <!--//main-body-->
+    </div>
+
+    <footer class="footer">
+      <div class="text-center">
+        <!--/* This template is free as long as you keep the footer attribution link. If you'd like to use the template without the attribution link, you can buy the commercial license via our website: themes.3rdwavemedia.com Thank you for your support. :) */-->
+        <small class="copyright"
+          >Designed with <i class="fas fa-heart"></i> by
+          <a href="http://themes.3rdwavemedia.com" target="_blank"
+            >Xiaoying Riley</a
+          >
+          for developers</small
+        >
+      </div>
+      <!--//container-->
+    </footer>
+    <!--//footer-->
+
+    <!--========== HTML2PDF ==========-->
+    <script src="assets/js/html2pdf.bundle.min.js"></script>
+
+    <!--========== MAIN JS ==========-->
+    <script src="assets/js/main.js"></script>
+  </body>
 </html>
